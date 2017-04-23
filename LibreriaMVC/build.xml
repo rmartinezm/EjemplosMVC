@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="libreriaMVC" default="all" basedir="." >
+
+  <property name="build.dir" value="build" />
+  <property name="src.dir"   value="src" />
+  <property name="vista.dir" value="vista" />
+
+  <target name="all" depends="libreriaMVC.jar" />
+
+  <target name="libreriaMVC.jar" depends="compile.libreriaMVC">
+    <jar jarfile="libreriaMVC.jar">
+      <zipfileset dir="${build.dir}" prefix="" />
+      <manifest>
+        <attribute name="Main-Class" value="libreriaMVC.LibreriaMVC"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="compile.libreriaMVC">
+    <mkdir dir="${build.dir}"/>    
+    <copydir src="${src.dir}/vista" dest="${build.dir}/libreriaMVC/vista" />
+    <javac srcdir="${src.dir}"
+           destdir="${build.dir}">
+      <classpath>
+      </classpath>
+      <compilerarg value="-Xlint:unchecked"/>
+    </javac>
+  </target>
+
+  <target name="clean">
+    <delete file="libreriaMVC.jar"/>
+    <delete dir="${build.dir}"/>
+  </target>
+
+</project>

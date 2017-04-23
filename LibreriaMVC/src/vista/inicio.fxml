@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?> 
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.beans.property.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.Color?>
+
+<VBox spacing="20" alignment="CENTER" prefWidth="900" prefHeight="500" fx:controller="libreriaMVC.controlador.Controlador" xmlns:fx="http://javafx.com/fxml">
+    
+    <fx:define>
+        <Font fx:id="FONT" size="18" />
+    </fx:define>
+       
+     <HBox spacing="10" alignment="CENTER">
+         <ListView fx:id="libros" prefHeight="350" prefWidth="200" onMouseClicked="#handleMouseClick"/>
+     </HBox>  
+       
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Registrar Libro" font="$FONT" prefWidth="150" prefHeight="20" onAction="#agregaLibro" />
+        <Button fx:id="btn_edita" text="Editar Libro" font="$FONT" prefWidth="150" prefHeight="20" onAction="#editaLibro" />
+        <Button fx:id="btn_elimina" text="Eliminar Libro" font="$FONT" prefWidth="150" prefHeight="20" onAction="#eliminaLibro" />
+        <Button fx:id="btn_sumalibros" text="Agregar Libros" font="$FONT" prefWidth="150" prefHeight="20" onAction="#sumaLibro" />
+        <Button fx:id="btn_ver" text="Ver Libro" font="$FONT" prefWidth="150" prefHeight="20" onAction="#verLibro" />
+    </HBox>
+    
+</VBox>

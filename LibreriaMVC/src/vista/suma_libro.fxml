@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?> 
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.beans.property.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.Color?>
+
+<VBox spacing="20" alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libreriaMVC.controlador.Suma_libroController">
+    <fx:define>
+        <Font fx:id="FONT" size="18" />
+    </fx:define>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <Text fx:id="textMisLibros" text="Contidad de libros a sumar" font="$FONT" />
+    </HBox>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <Text text="Cuantos libros deseas agregar?" font="$FONT" />
+        <TextField fx:id="tfLibrosASumar" prefWidth="150" prefHeight="20"/>
+    </HBox>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Cancelar" font="$FONT" prefWidth="200" prefHeight="20" onAction="#cancelar" />
+        <Button fx:id="btn_aceptar" text="Agregar Libros" font="$FONT" prefWidth="200" prefHeight="20" onAction="#agregaLibros" />
+    </HBox>
+    
+</VBox>
